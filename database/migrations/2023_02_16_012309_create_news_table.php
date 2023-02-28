@@ -11,7 +11,6 @@ return new class extends Migration
      *
      * @return void
      */
-    // title と body と image_path を追記
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
