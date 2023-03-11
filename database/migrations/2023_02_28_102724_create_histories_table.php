@@ -11,14 +11,12 @@ return new class extends Migration
      *
      * @return void
      */
-    // title と body と image_path を追記
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('histories', function (Blueprint $table) {
             $table->id();
-            $table->string('title'); // ニュースのタイトルを保存するカラム
-            $table->string('body');  // ニュースの本文を保存するカラム
-            $table->string('image_path')->nullable();  // 画像のパスを保存するカラム
+            $table->bigInteger('news_id');
+            $table->string('edited_at');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('histories');
     }
 };

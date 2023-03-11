@@ -35,6 +35,3 @@ return new class extends Migration
 };
 
 
-//【応用】 create_profiles_table というMigrationのひな形ファイルを作成し、 
-//profilesというテーブル名で名前(name)、性別(gender)、趣味(hobby)、自己紹介(introduction)を
-//保存できるように修正して、 migrateしてテーブルを作成しましょう
