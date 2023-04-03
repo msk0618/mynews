@@ -5,18 +5,6 @@
 @section('content')
     <div class="container">
         <hr color="#c0c0c0">
-            <div class="row">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="caption mx-auto">
-                                <div class="image"></div>
-                                <div class="title p-2"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6"></div>
-                    </div>
-            </div>
-        <hr color="#c0c0c0">
         <div class="row">
             <div class="posts col-md-8 mx-auto mt-3">
                 @foreach($posts as $post)
@@ -27,7 +15,7 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="title">
-                                    {{ Str::limit($post->name, 150) }}
+                                    <p>{{ Str::limit($post->name, 150) }}</p>
                                 </div>
                                 <div class="title">
                                     {{ Str::limit($post->gender, 150) }}
